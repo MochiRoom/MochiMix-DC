@@ -2,5 +2,5 @@
 
 Discord Bot Client for MochiMix
 
-> ![WARNING]
+> [!WARNING]
 > This bot is under development
