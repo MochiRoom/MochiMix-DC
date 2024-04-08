@@ -105,6 +105,8 @@ int main(int argc, char const *argv[]) {
 
             if (v && v->voiceclient && v->voiceclient->is_ready())
                 v->voiceclient->skip_to_next_marker();
+
+            event.reply("Done");
         } break;
 
         case 4: { // stop
@@ -113,22 +115,18 @@ int main(int argc, char const *argv[]) {
 
             if (v && v->voiceclient && v->voiceclient->is_ready())
                 v->voiceclient->stop_audio();
+
+            event.reply("Done");
         } break;
 
         case 5: { // pause
-                  // if (!v)
-                  //     join();
-
-            // uint id = 0, count = 0;
-            // if (sscanf(data, "%i", &id) < 1)
-            //     id = !v->voiceclient->is_paused();
-
-            // if (v && v->voiceclient && v->voiceclient->is_ready())
             v->voiceclient->pause_audio(true);
+            event.reply("Done");
         } break;
 
         case 6: { // unpause
             v->voiceclient->pause_audio(false);
+            event.reply("Done");
         } break;
         }
     });

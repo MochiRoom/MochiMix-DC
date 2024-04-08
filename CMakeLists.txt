@@ -7,8 +7,8 @@ set(SOURCES
     src/util.cpp
 )
 
-set(LIBRARIES
 # Libraries
+set(LIBRARIES
     dpp
     mpg123
 )
